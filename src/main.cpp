@@ -65,10 +65,11 @@ void showNetworkInfo()
 
 void printNetworkInfo()
 {
-    Serial.println("");
-    Serial.println("WiFi connected");
+    Serial.println();
+    Serial.println();
+    Serial.print("Connected to: ");
     Serial.println(SSID);
-    Serial.println("IP address: ");
+    Serial.print("IP address: ");
     Serial.println(WiFi.localIP());
     Serial.print("Navigate to http://");
     Serial.print(deviceName);
@@ -138,7 +139,7 @@ void setup()
     }
 
     WiFi.begin(SSID, PASSWORD);
-    Serial.print("Connecting to '");
+    Serial.print("Connecting WiFi to '");
     Serial.print(SSID);
     Serial.print("'");
     while (WiFi.status() != WL_CONNECTED) {
